@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { Post } from './post';
+import { DataService } from './data.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  post:Post[]
+  constructor(
+    private dataService: DataService
+  ) {
+    
+  }
+  
+
 }
